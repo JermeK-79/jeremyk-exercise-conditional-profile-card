@@ -51,16 +51,27 @@ function render(variables = {}) {
             ${
               variables.twitter
                 ? `<li><a href=${variables.twitter}><i class="fab fa-twitter"></i></a></li>`
-                : `<li><a<i class="fab fa-twitter"></i></a></li>`
+                : ``
             }
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/school/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
+            ${
+              variables.github
+                ? `<li><a href=${variables.twitter}><i class="fab fa-github"></i></a></li>`
+                : ``
+            }
+            ${
+              variables.linkedin
+                ? `<li><a href=${variables.twitter}><i class="fab fa-linkedin"></i></a></li>`
+                : ``
+            }
+            ${
+              variables.instagram
+                ? `<li><a href=${variables.twitter}><i class="fab fa-instagram"></i></a></li>`
+                : ``
+            }
           </ul>
         </div>
     `;
 }
-
 /**
  * Don't change any of the lines below, here is where we do the logic for the dropdowns
  */
